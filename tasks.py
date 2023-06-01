@@ -151,7 +151,7 @@ def task_9_76_b():
     i = 0
     lastIndex = 0
     while i < len(inWord):
-        if inWord[i] == 'е' or inWord[i] == 'Е': lastIndex = i
+        if inWord[i] == 'e' or inWord[i] == 'E': lastIndex = i
         i += 1
 
     if lastIndex != 0:
@@ -160,6 +160,33 @@ def task_9_76_b():
         print('Буква "е" в предложении не встречается.')
 
     return None
+
+def task_9_76_b_rev(): # Через обратную индексацию
+    """
+    8) 9.76.(б) Дано предложение, в котором имеется несколько букв е. Найти:
+        б) порядковый номер последней из них.
+
+    :return:
+    """
+    inWord = input('Введите предложение: ')
+    i = 1
+    lengthWord = len(inWord)
+
+    while i <= lengthWord:
+        symbol = inWord[-i]
+        if symbol == 'e' or symbol == 'E':
+            break
+        i += 1
+
+    if i != 0:
+        print(f'Порядковый номер последней буквы "е": {lengthWord - i}')
+    else:
+        print('Буква "е" в предложении не встречается.')
+
+    return None
+
+
+
 
 
 def task_x_01():
