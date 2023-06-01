@@ -41,6 +41,5 @@ elif taskNumber == 8:
 elif taskNumber == 9:
     task = tasks.task_x_01
 
-
 if task is not None:
     task()
